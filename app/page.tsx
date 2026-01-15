@@ -2,12 +2,13 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ModeToggle } from "@/components/mode-toggle";
-import { Pizza, Store, Smartphone, Globe, CheckCircle, ArrowRight, Utensils, MapPin, Calendar } from "lucide-react";
+import { Pizza, Store, Globe, CheckCircle, ArrowRight, Utensils } from "lucide-react";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/fade-in";
 import Image from "next/image";
 import codingImage from "../public/coding.jpg"
 import notebuddyScreen from "../public/notebuddy-screen.png"
 import { StatCounter } from "@/components/stat-counter";
+import { CookiePolicy } from "@/components/cookie-policy";
 
 export default function HomePage() {
   return (
@@ -15,22 +16,19 @@ export default function HomePage() {
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="font-bold text-xl flex items-center gap-2">
+          <Link href="/" className="font-bold text-xl flex items-center gap-2">
             <span className="bg-blue-600 text-white px-2 py-1 rounded-md">PC</span>
             <span className="hidden sm:inline-block">Soluzioni Web</span>
-          </div>
+          </Link>
           <nav className="hidden md:flex gap-6 items-center">
             <Link href="#about" className="text-sm font-medium hover:text-blue-600 transition-colors">
               Chi Sono
             </Link>
-            <Link href="#services" className="text-sm font-medium hover:text-blue-600 transition-colors">
+            <Link href="#services" className="text-sm font-medium hover:text-yellow-300 transition-colors">
               Servizi
             </Link>
             <Link href="#portfolio" className="text-sm font-medium hover:text-red-500 transition-colors">
               Portfolio
-            </Link>
-            <Link href="#process" className="text-sm font-medium hover:text-yellow-500 transition-colors">
-              Processo
             </Link>
             <Link href="#contact" className="text-sm font-medium hover:text-green-600 transition-colors">
               Contatti
@@ -364,8 +362,9 @@ export default function HomePage() {
       </main>
 
       <footer className="py-8 border-t mt-12 bg-muted/30">
-        <div className="container mx-auto px-4 text-center text-muted-foreground text-sm">
+        <div className="container mx-auto px-4 text-center text-muted-foreground text-sm flex flex-col items-center gap-4">
           <p>&copy; {new Date().getFullYear()} Poretto Cristian. Aiuto le attività locali a prosperare online.</p>
+          <CookiePolicy />
         </div>
       </footer>
     </div>
