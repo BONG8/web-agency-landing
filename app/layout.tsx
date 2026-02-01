@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Poretto Cristian | Soluzioni Web per Attività Locali",
-  description: "Sviluppo siti web professionali per pizzerie, ristoranti e attività locali. Siti su misura che attirano clienti.",
+  title: "Cristian Poretto | Sviluppatore Web · Problem Solver",
+  description: "Hai un problema digitale? Ho la soluzione. Siti, sistemi, automazioni — se è codice, lo scrivo. Mogliano Veneto, Treviso.",
 };
 
 export default function RootLayout({
@@ -30,7 +30,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
