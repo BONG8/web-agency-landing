@@ -53,7 +53,7 @@ export default function HomePage() {
             
             <CharacterReveal 
               text="Hai un problema digitale? Ho la soluzione."
-              className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight"
+              className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight "
               delay={0.3}
             />
             

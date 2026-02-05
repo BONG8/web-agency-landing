@@ -89,14 +89,14 @@ export function CharacterReveal({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
-  const characters = text.split("");
+  const words = text.split(" ");
 
   const container: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: { 
-        staggerChildren: 0.02, 
+        staggerChildren: 0.1, // Riduci leggermente il delay
         delayChildren: delay 
       },
     },
@@ -107,7 +107,7 @@ export function CharacterReveal({
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.1,
+        duration: 0.3,
         ease: "easeOut" as const,
       },
     },
@@ -126,14 +126,13 @@ export function CharacterReveal({
       animate={isInView ? "visible" : "hidden"}
       aria-label={text}
     >
-      {characters.map((char, index) => (
+      {words.map((word, index) => (
         <motion.span
           variants={child}
           key={index}
-          className="inline-block"
-          style={{ whiteSpace: char === " " ? "pre" : "normal" }}
+          className="inline-block mr-[0.25em]"
         >
-          {char === " " ? "\u00A0" : char}
+          {word}
         </motion.span>
       ))}
     </motion.h1>

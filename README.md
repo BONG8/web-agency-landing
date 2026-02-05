@@ -33,4 +33,18 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## SEO Best Practices
+
+Questa applicazione implementa le seguenti best practice SEO:
+
+- Meta tag avanzati (title, description, keywords, author, viewport)
+- Tag Open Graph e Twitter per la condivisione social
+- robots.txt e sitemap.xml per l'indicizzazione
+- URL canonici per evitare contenuti duplicati
+- Dati strutturati JSON-LD (Organization, Website, Breadcrumb)
+- Favicon e manifest per branding e PWA
+- Ottimizzazione immagini Next.js
+- Migliorata accessibilità (alt text descrittivi, ARIA, contrasto)
+
+Per ulteriori miglioramenti, utilizzare strumenti come Google Lighthouse, Search Console e validator JSON-LD.

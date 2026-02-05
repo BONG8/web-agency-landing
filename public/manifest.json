@@ -1,0 +1,16 @@
+{
+  "name": "Cristian Poretto Web Agency",
+  "short_name": "Poretto Web",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#18181b",
+  "theme_color": "#18181b",
+  "description": "Hai un problema digitale? Ho la soluzione. Siti, sistemi, automazioni — se è codice, lo scrivo.",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48 64x64 128x128 256x256",
+      "type": "image/x-icon"
+    }
+  ]
+}
