@@ -53,6 +53,12 @@ export function ContactForm() {
                 </div>
             )}
 
+            {/* Honeypot field per bloccare lo spam */}
+            <div className="hidden" aria-hidden="true">
+                <label htmlFor="company">Azienda</label>
+                <input id="company" name="company" type="text" tabIndex={-1} autoComplete="off" />
+            </div>
+
             <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-medium">Nome</label>
                 <input

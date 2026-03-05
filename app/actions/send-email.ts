@@ -26,6 +26,12 @@ export async function sendContactEmail(
     formData: FormData
 ): Promise<ContactFormState> {
     try {
+        // Controllo Honeypot: se il campo nascosto è compilato, molto probabilmente è un bot.
+        // Simuliamo un successo per ingannarlo e non inviamo l'email.
+        if (formData.get("company")) {
+            return { success: true };
+        }
+
         const data = {
             name: formData.get("name"),
             email: formData.get("email"),
@@ -44,7 +50,7 @@ export async function sendContactEmail(
         const { name, email, message } = validatedData.data;
 
         const { error } = await resend.emails.send({
-            from: "Codex Venezia <onboarding@resend.dev>", // Or the user's verified domain if available
+            from: "Poretto Cristian <contatti@porettocristian.it>", // Or the user's verified domain if available
             to: "poretto.cristian07@gmail.com",
             subject: `Nuovo messaggio dal portfolio da ${name}`,
             replyTo: email,
