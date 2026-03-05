@@ -8,6 +8,7 @@ import { CharacterReveal, GlowingBadge } from "@/components/text-reveal";
 import Image from "next/image";
 import notebuddyScreen from "../public/notebuddy-screen.png";
 import { CookiePolicy } from "@/components/cookie-policy";
+import { ContactForm } from "@/components/contact-form";
 
 export default function HomePage() {
   return (
@@ -42,7 +43,7 @@ export default function HomePage() {
           {/* Background effects */}
           <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-size-[32px_32px]" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-cyan-500/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
-          
+
           <div className="container px-4 space-y-8 max-w-4xl">
             <FadeIn delay={0.1}>
               <GlowingBadge>
@@ -50,35 +51,35 @@ export default function HomePage() {
                 Sviluppatore Web · Problem Solver
               </GlowingBadge>
             </FadeIn>
-            
-            <CharacterReveal 
+
+            <CharacterReveal
               text="Hai un problema digitale? Ho la soluzione."
               className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight "
               delay={0.3}
             />
-            
+
             <FadeIn delay={1.2}>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Non mi specializzo in una cosa sola. Mi specializzo nel capire cosa ti serve e costruirlo. 
+                Non mi specializzo in una cosa sola. Mi specializzo nel capire cosa ti serve e costruirlo.
                 Siti, sistemi, automazioni — se è codice, lo scrivo. Se è un casino, lo risolvo.
               </p>
             </FadeIn>
-            
+
             <FadeIn delay={1.4}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                <Button 
-                  size="lg" 
-                  asChild 
+                <Button
+                  size="lg"
+                  asChild
                   className="rounded-full text-lg h-12 px-8 bg-cyan-500 hover:bg-cyan-400 text-black font-semibold transition-all hover:glow-cyan"
                 >
                   <Link href="#contatti">
                     Parlami del tuo progetto <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  asChild 
+                <Button
+                  size="lg"
+                  variant="outline"
+                  asChild
                   className="rounded-full text-lg h-12 px-8 border-border hover:border-cyan-500/50 hover:bg-cyan-500/5"
                 >
                   <Link href="#approccio">
@@ -99,30 +100,30 @@ export default function HomePage() {
                   Non sono un tuttofare.<br />
                   <span className="text-cyan-400">Sono uno che si adatta.</span>
                 </h2>
-                
+
                 <div className="text-lg text-muted-foreground space-y-6 max-w-3xl leading-relaxed">
                   <p>
-                    Studio Informatica all&apos;ITIS Max Planck di Villorba. Ma mentre a scuola imparo la teoria, 
+                    Studio Informatica all&apos;ITIS Max Planck di Villorba. Ma mentre a scuola imparo la teoria,
                     fuori costruisco prodotti reali.
                   </p>
                   <p>
-                    Questo mix mi rende diverso: ho le basi solide di chi studia, e la velocità di chi lavora sul campo. 
-                    Non ho i tempi morti delle agenzie. Non ho i preventivi gonfiati dei freelance navigati. 
+                    Questo mix mi rende diverso: ho le basi solide di chi studia, e la velocità di chi lavora sul campo.
+                    Non ho i tempi morti delle agenzie. Non ho i preventivi gonfiati dei freelance navigati.
                     Ho fame, e la fame ti fa muovere.
                   </p>
                   <p>
-                    Il mio approccio è semplice: tu mi porti un problema, io trovo il modo più pulito e veloce 
-                    per risolverlo. Che sia un sito vetrina per il tuo locale, un sistema per gestire un inventario 
+                    Il mio approccio è semplice: tu mi porti un problema, io trovo il modo più pulito e veloce
+                    per risolverlo. Che sia un sito vetrina per il tuo locale, un sistema per gestire un inventario
                     complesso, o qualcosa che non hai ancora capito come definire — ci arrivo.
                   </p>
                   <p className="text-foreground font-medium">
-                    Non mi interessa fare mille progetti mediocri. Mi interessa fare pochi progetti fatti bene, 
+                    Non mi interessa fare mille progetti mediocri. Mi interessa fare pochi progetti fatti bene,
                     con gente che capisce il valore di un lavoro fatto come si deve.
                   </p>
                 </div>
               </div>
             </FadeIn>
-            
+
             {/* Method blocks */}
             <StaggerContainer className="grid md:grid-cols-3 gap-6">
               <StaggerItem>
@@ -132,12 +133,12 @@ export default function HomePage() {
                   </div>
                   <h3 className="text-xl font-bold mb-2">01 — Ascolto</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Prima di scrivere una riga di codice, capisco cosa ti serve davvero. 
+                    Prima di scrivere una riga di codice, capisco cosa ti serve davvero.
                     Non quello che pensi di volere — quello che risolve il problema.
                   </p>
                 </Card>
               </StaggerItem>
-              
+
               <StaggerItem>
                 <Card className="p-6 bg-card/50 border-border/50 hover:border-cyan-500/30 transition-all group h-full">
                   <div className="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center mb-4 group-hover:bg-cyan-500/20 transition-colors">
@@ -145,12 +146,12 @@ export default function HomePage() {
                   </div>
                   <h3 className="text-xl font-bold mb-2">02 — Costruisco</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Niente template. Niente scorciatoie. Codice scritto da zero, 
+                    Niente template. Niente scorciatoie. Codice scritto da zero,
                     ottimizzato per essere veloce oggi e scalabile domani.
                   </p>
                 </Card>
               </StaggerItem>
-              
+
               <StaggerItem>
                 <Card className="p-6 bg-card/50 border-border/50 hover:border-cyan-500/30 transition-all group h-full">
                   <div className="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center mb-4 group-hover:bg-cyan-500/20 transition-colors">
@@ -158,7 +159,7 @@ export default function HomePage() {
                   </div>
                   <h3 className="text-xl font-bold mb-2">03 — Consegno</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Deadline rispettate. Comunicazione costante. Quando dico che è pronto, 
+                    Deadline rispettate. Comunicazione costante. Quando dico che è pronto,
                     è pronto — testato, deployato, funzionante.
                   </p>
                 </Card>
@@ -175,7 +176,7 @@ export default function HomePage() {
                 Su cosa sto lavorando
               </h2>
             </FadeIn>
-            
+
             <div className="space-y-12">
               {/* Codex Venezia */}
               <FadeIn>
@@ -192,27 +193,27 @@ export default function HomePage() {
                       <p className="text-muted-foreground">Sistema di Gestione Opere d&apos;Arte</p>
                     </div>
                   </div>
-                  
+
                   <div className="text-muted-foreground space-y-4 leading-relaxed max-w-3xl">
                     <p>
                       Attualmente impegnato nella digitalizzazione e gestione d&apos;archivio per un importante artista veneziano.
                     </p>
                     <p>
-                      Decenni di opere. Centinaia di pezzi tra venduti, esposti e in collezione privata. 
+                      Decenni di opere. Centinaia di pezzi tra venduti, esposti e in collezione privata.
                       Un archivio fisico che stava diventando ingestibile.
                     </p>
                     <p>
-                      Sto costruendo un sistema che trasforma quel caos in un database consultabile, 
+                      Sto costruendo un sistema che trasforma quel caos in un database consultabile,
                       filtrabile, aggiornabile da qualsiasi dispositivo. Non un sito vetrina — uno strumento di lavoro.
                     </p>
                   </div>
-                  
+
                   <p className="text-sm text-muted-foreground/60 mt-6 pt-6 border-t border-border/50">
                     Dettagli in arrivo.
                   </p>
                 </Card>
               </FadeIn>
-              
+
               {/* NoteBuddy */}
               <FadeIn delay={0.2}>
                 <Card className="p-8 md:p-10 bg-card/50 border-border/50 hover:border-cyan-500/30 transition-all overflow-hidden">
@@ -228,18 +229,18 @@ export default function HomePage() {
                         </div>
                         <p className="text-muted-foreground">Mind Mapping App · Side Project</p>
                       </div>
-                      
+
                       <div className="text-muted-foreground space-y-4 leading-relaxed">
                         <p>
-                          Un&apos;app di mind mapping che sto costruendo da zero. Trasforma idee sparse 
+                          Un&apos;app di mind mapping che sto costruendo da zero. Trasforma idee sparse
                           in mappe visuali interattive — il modo in cui organizzo i miei pensieri quando progetto.
                         </p>
                         <p>
-                          È già live e funzionante, con nuove feature in arrivo: cloud sync e integrazione AI 
+                          È già live e funzionante, con nuove feature in arrivo: cloud sync e integrazione AI
                           sono i prossimi step. Non è un progetto abbandonato — è un prodotto che evolve.
                         </p>
                       </div>
-                      
+
                       <div className="flex flex-wrap gap-4 pt-2">
                         <div className="flex items-center gap-2 text-sm text-muted-foreground">
                           <Brain className="h-4 w-4 text-cyan-400" />
@@ -254,10 +255,10 @@ export default function HomePage() {
                           UI pulita e veloce
                         </div>
                       </div>
-                      
-                      <Button 
-                        variant="outline" 
-                        asChild 
+
+                      <Button
+                        variant="outline"
+                        asChild
                         className="rounded-full border-border hover:border-cyan-500/50 hover:bg-cyan-500/5 w-fit"
                       >
                         <a href="https://notebuddy.software" target="_blank" rel="noopener noreferrer">
@@ -265,12 +266,12 @@ export default function HomePage() {
                         </a>
                       </Button>
                     </div>
-                    
+
                     <div className="lg:w-100 shrink-0">
                       <div className="rounded-xl overflow-hidden border border-border/50 bg-muted/30">
-                        <Image 
-                          src={notebuddyScreen} 
-                          alt="NoteBuddy Screenshot" 
+                        <Image
+                          src={notebuddyScreen}
+                          alt="NoteBuddy Screenshot"
                           className="object-cover w-full h-full"
                         />
                       </div>
@@ -291,66 +292,23 @@ export default function HomePage() {
                   Hai qualcosa in mente?
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Scrivimi. Ti rispondo entro 24 ore con un parere onesto — 
+                  Scrivimi. Ti rispondo entro 24 ore con un parere onesto —
                   se non sono la persona giusta per il tuo progetto, te lo dico subito.
                 </p>
               </div>
             </FadeIn>
-            
+
             <FadeIn delay={0.2}>
               <Card className="p-8 bg-card/50 border-border/50">
-                <form 
-                  className="space-y-6" 
-                  action="https://formsubmit.co/poretto.cristian07@gmail.com" 
-                  method="POST"
-                >
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium">Nome</label>
-                    <input 
-                      id="name" 
-                      name="name" 
-                      required
-                      className="flex h-11 w-full rounded-lg border border-input bg-background/50 px-4 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/50 focus-visible:border-cyan-500/50 transition-all" 
-                      placeholder="Il tuo nome" 
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium">Email</label>
-                    <input 
-                      id="email" 
-                      type="email" 
-                      name="email" 
-                      required
-                      className="flex h-11 w-full rounded-lg border border-input bg-background/50 px-4 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/50 focus-visible:border-cyan-500/50 transition-all" 
-                      placeholder="tu@esempio.it" 
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium">Messaggio</label>
-                    <textarea 
-                      id="message" 
-                      name="message" 
-                      required
-                      className="flex min-h-30 w-full rounded-lg border border-input bg-background/50 px-4 py-3 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/50 focus-visible:border-cyan-500/50 transition-all resize-none" 
-                      placeholder="Descrivi il problema in 2 righe. Al resto ci pensiamo insieme." 
-                    />
-                  </div>
-                  <Button 
-                    type="submit"
-                    className="w-full h-12 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-black font-semibold transition-all hover:glow-cyan-sm" 
-                    size="lg"
-                  >
-                    Invia
-                  </Button>
-                </form>
+                <ContactForm />
               </Card>
             </FadeIn>
 
             <FadeIn delay={0.4}>
               <div className="mt-8 text-center">
                 <p className="text-muted-foreground mb-3">Oppure scrivimi direttamente</p>
-                <a 
-                  href="mailto:poretto.cristian07@gmail.com" 
+                <a
+                  href="mailto:poretto.cristian07@gmail.com"
                   className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
                 >
                   <Mail className="h-4 w-4" />
