@@ -50,7 +50,7 @@ export async function sendContactEmail(
         const { name, email, message } = validatedData.data;
 
         const { error } = await resend.emails.send({
-            from: "Poretto Cristian <contatti@porettocristian.it>", // Or the user's verified domain if available
+            from: "Poretto Cristian Portfolio <contatti@porettocristian.it>", // Or the user's verified domain if available
             to: "poretto.cristian07@gmail.com",
             subject: `Nuovo messaggio dal portfolio da ${name}`,
             replyTo: email,
