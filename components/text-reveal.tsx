@@ -16,7 +16,7 @@ export function TextReveal({
   className = "", 
   delay = 0,
   highlightWord,
-  highlightClassName = "text-cyan-400"
+  highlightClassName = "text-primary"
 }: TextRevealProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -146,22 +146,10 @@ interface GlowingBadgeProps {
 
 export function GlowingBadge({ children, className = "" }: GlowingBadgeProps) {
   return (
-    <motion.div
-      className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-sm font-medium ${className}`}
-      animate={{
-        boxShadow: [
-          "0 0 20px rgba(0, 212, 255, 0)",
-          "0 0 20px rgba(0, 212, 255, 0.3)",
-          "0 0 20px rgba(0, 212, 255, 0)",
-        ],
-      }}
-      transition={{
-        duration: 2,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
+    <div
+      className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border border-foreground/10 bg-foreground/5 text-foreground/80 text-sm font-medium tracking-wide ${className}`}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
